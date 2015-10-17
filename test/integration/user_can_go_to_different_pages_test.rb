@@ -1,21 +1,28 @@
 require 'test_helper'
 
-class WelcomeControllerTest < ActionController::TestCase
+class PageNavigationTest < ActionDispatch::IntegrationTest
+
   test "user can go to the blog page" do
     visit '/'
-    click_link 'Blog'
+    within(".navbar") do
+      click_link 'Blog'
+    end
     assert_equal blogs_path, current_path
   end
 
   test "user can go to the reviews page" do
     visit '/'
-    click_link 'Reviews'
+    within(".navbar") do
+      click_link 'Reviews'
+    end
     assert_equal reviews_path, current_path
   end
 
   test "user can go to the food challenges page" do
     visit '/'
-    click_link 'Food Challenges'
+    within(".navbar") do
+      click_link 'Food Challenges'
+    end
     assert_equal challenges_path, current_path
   end
 

@@ -1,1 +1,64 @@
-<h1>This is my home page!</h1>
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('https://images.unsplash.com/photo-1426869981800-95ebf51ce900?q=80&fm=jpg&s=2c89e023814a3fdb98edc129cf1357c2');"></div>
+            <div class="carousel-caption">
+                <h1>EZ Eats</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Vegetarian_Maki_Sushi_at_Suzuran_Japan_Foods_Trading.jpg/1920px-Vegetarian_Maki_Sushi_at_Suzuran_Japan_Foods_Trading.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>EZ Eats</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Waffle_with_strawberries_and_confectioner%27s_sugar.jpg/1920px-Waffle_with_strawberries_and_confectioner%27s_sugar.jpg');"></div>
+            <div class="carousel-caption">
+                <h1 class="homepage-title">EZ Eats</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+<div class="container">
+
+  <div id="welcome-boxes" class="row">
+
+    <div class=col-md-4>
+      <img src="https://images.unsplash.com/photo-1422207175003-e5b7d45ceb7b?q=80&fm=jpg&s=a853f4ada4f0804231f1324fe0727d14" alt="test" class="img-responsive">
+      <div class="carousel-caption">
+        <h1 class="btn btn-default btn-lg"><%= link_to "Blog", blogs_path %></h1>
+      </div>
+    </div>
+
+  <div class=col-md-4>
+    <img src="https://images.unsplash.com/photo-1428515613728-6b4607e44363?q=80&fm=jpg&s=71a40856ab62d1ff1549d58b9b412b5b" alt="test" class="img-responsive">
+    <div class="carousel-caption">
+      <h1 class="btn btn-default btn-lg"><%= link_to "Reviews", reviews_path %></h1>
+    </div>
+  </div>
+
+  <div class=col-md-4>
+    <img src="https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&fm=jpg&s=79e6ea67e8fd37af2833db624571ff0d" alt="test" class="img-responsive">
+    <div class="carousel-caption">
+      <h1 class="btn btn-default btn-lg"><%= link_to "Food Challenges", challenges_path %></h1>
+    </div>
+  </div>
+</div>

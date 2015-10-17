@@ -1,6 +1,13 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$color1: #57002b; //rgba(87, 0, 43, 100)
+$color2: #e0e5e2; //rgba(224, 229, 226, 100)
+$color3: #c5c096; //rgba(197, 192, 150, 100)
+$color4: #896636; //rgba(137, 102, 54, 100)
+$color5: #517182; //rgba(81, 113, 130, 100)
+
 html,
 body {
    height: 100%;
@@ -8,7 +15,7 @@ body {
 
 body {
    padding-top: 50px;
-   background-color: gray;
+   background-color: $color3;
 }
 
 .img-portfolio {
@@ -40,10 +47,15 @@ header.carousel h1 {
  font-size: 100px;
  padding-bottom: 30px;
  font-weight: lighter;
+ color: $color2;
 }
 
 #welcome-boxes {
   padding-top: 50px;
+
+  .carousel-caption {
+    color: $color2;
+  }
 
   img {
     height: 240px;
@@ -54,7 +66,12 @@ header.carousel h1 {
   .btn {
     font-weight: lighter;
     font-size: 2em;
-    color: black;
+    color: $color1;
+    background-color: $color2;
+
+    a {
+      color: $color5;
+    }
   }
 
 }

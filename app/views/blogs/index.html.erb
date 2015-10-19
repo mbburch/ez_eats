@@ -1,10 +1,40 @@
 <div class="container">
   <h1 class="text-center">EZ's Blog</h1>
-  <ul class="blogs">
-    <% @blogs.each do |blog| %>
-    <li class="title"><%= blog.title %></li>
-    <li class="date"><%= blog.date %></li>
-    <li class="content"><%= blog.content %></li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="blogs">
+        <% @blogs.each do |blog| %>
+          <h2 class="blog-title"><%= link_to blog.title, blog_path(blog) %></h2>
+          <p class="blog-date">Posted on <%= blog.date %></p>
+          <img class="img-responsive" src= "<%= "#{blog.image}" %>" alt="">
+          <p class="blog-content"><%= blog.content %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-tags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Blog Archive
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-tags">
+          <% archive.each do |archive| %>
+            <li><a href="#"><%= archive.titleize %></a></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-tags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Blog Tags
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-tags">
+          <% @tags.each do |tag| %>
+            <li><a href="<%= tag_path(tag) %>"><%= tag.name.titleize %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,10 +4,12 @@
     <div class="col-md-8">
       <div class="blogs">
         <% @blogs.each do |blog| %>
-          <h2 class="blog-title"><%= link_to blog.title, blog_path(blog) %></h2>
-          <p class="blog-date">Posted on <%= blog.date %></p>
-          <img class="img-responsive" src= "<%= "#{blog.image}" %>" alt="">
-          <p class="blog-content"><%= blog.content %></p>
+          <div class="each-blog">
+            <h2 class="blog-title"><%= link_to blog.title, blog_path(blog) %></h2>
+            <p class="blog-date">Posted on <%= blog.date %></p>
+            <img class="img-responsive" src= "<%= "#{blog.image}" %>" alt="">
+            <p class="blog-content"><%= blog.content %></p>
+          </div>
         <% end %>
       </div>
     </div>

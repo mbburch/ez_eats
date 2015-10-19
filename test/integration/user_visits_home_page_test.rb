@@ -22,5 +22,3 @@ class HomePageViewTest < ActionDispatch::IntegrationTest
 
   end
 end
-
-# I should see the carousel of pictures on the page.

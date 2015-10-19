@@ -5,10 +5,11 @@
       <div class="blogs">
         <% @blogs.each do |blog| %>
           <div class="each-blog">
+            <p class="pull-right blog-date">Posted on <%= blog.date %></p>
             <h2 class="blog-title"><%= link_to blog.title, blog_path(blog) %></h2>
-            <p class="blog-date">Posted on <%= blog.date %></p>
             <img class="img-responsive" src= "<%= "#{blog.image}" %>" alt="">
             <p class="blog-content"><%= blog.content %></p>
+            <button class="btn btn-default btn-lg"><%= link_to "Read More", "#" %></button>
           </div>
         <% end %>
       </div>

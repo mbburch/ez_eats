@@ -20,5 +20,18 @@
  @import "blogs";
  @import "welcome";
 
+ body {
+   font-size: 100%;
+   font-family: "Helvetica", sans-serif;
+ }
+
+ h1 {
+   font-size: 100px;
+   padding-bottom: 30px;
+   font-weight: lighter;
+   font-family: "Bangers";
+   color: $color5;
+ }
+
 
 

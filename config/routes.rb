@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :reviews
   resources :blogs
-  resources :challenges 
+  resources :challenges
+  resources :tags
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

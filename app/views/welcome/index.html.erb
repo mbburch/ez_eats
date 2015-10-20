@@ -38,7 +38,9 @@
 </header>
 
 <div class="container">
-  <%= flash[:notice] %>
+<% if flash.notice %>
+<%= render 'layouts/flash' %>
+<% end %>
 </div>
 
 <div class="container">

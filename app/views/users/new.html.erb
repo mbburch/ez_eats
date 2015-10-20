@@ -10,18 +10,23 @@
 </div>
 <% else %>
 <div class='row'>
-  <div class='col-md-6 col-centered'>
-    <div class='panel'>
-      <div class='panel-body'>
-        <h3>Account Creation</h1>
+  <div class='row text-center'>
+    <div class='col-md-8 col-centered'>
+      <div class='panel'>
+        <div class='panel-body'>
+          <h3>Account Creation</h1>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <%= flash[:alert] %>
+  <% if flash.notice %>
+  <%= render 'layouts/flash' %>
+  <% end %>
 </div>
+
 <%= render 'signup_form' %>
 
 <% end %>

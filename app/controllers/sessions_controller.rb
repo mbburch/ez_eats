@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user ||= User.find_by_email(params[:user][:email])
     if user && user.authenticate(params[:user][:password])
       session[:user] = user.id
-      redirect_to blogs_path
+      redirect_to root_path
     else
       flash[:notice] = "Invalid Login"
       redirect_to action: 'new'

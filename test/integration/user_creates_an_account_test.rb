@@ -4,7 +4,7 @@ class UserCreatesAccountTest < ActionDispatch::IntegrationTest
 
   test "user clicks Sign Up and is taken to the sign up page" do
     visit '/'
-    click_link "Log Out" 
+    click_link "Log Out"
     click_link("Sign Up")
     assert_equal current_path, register_path
     # within(".") do

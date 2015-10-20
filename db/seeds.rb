@@ -1,3 +1,4 @@
+require 'ffaker'
 User.create!(name: "admin", email: "admin@example.com", password: "password")
 
 class Seed
@@ -9,9 +10,9 @@ class Seed
 
   def generate_blogs
     10.times do
-      title  = Faker::Lorem.word.capitalize
+      title  = FFaker::Food.herb_or_spice.titleize
       image = "http://lorempixel.com/400/200/food"
-      content = Faker::Lorem.paragraph
+      content = FFaker::BaconIpsum.paragraphs.join
       Blog.create!(title:  title,
                    content: content,
                    image: image,
@@ -21,7 +22,7 @@ class Seed
 
   def generate_tags
     10.times do
-      name = Faker::Lorem.word.capitalize
+      name = FFaker::Food.ingredient.titleize
       Tag.create!(name: name)
     end
   end

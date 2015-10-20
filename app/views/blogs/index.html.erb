@@ -9,7 +9,7 @@
             <h2 class="blog-title"><%= link_to blog.title, blog_path(blog) %></h2>
             <img class="img-responsive" src= "<%= "#{blog.image}" %>" alt="">
             <p class="blog-content"><%= blog.content %></p>
-            <button class="btn btn-default btn-lg"><%= link_to "Read More", "#" %></button>
+            <button class="btn btn-default btn-lg"><%= link_to "Read More", blog_path(blog) %></button>
           </div>
         <% end %>
       </div>

@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker', '1.4.2'
+gem 'ffaker'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

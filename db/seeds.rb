@@ -1,4 +1,5 @@
 require 'ffaker'
+User.create!(name: "admin", email: "admin@example.com", password: "password")
 
 class Seed
 

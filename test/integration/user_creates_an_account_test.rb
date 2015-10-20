@@ -13,12 +13,12 @@ class UserCreatesAccountTest < ActionDispatch::IntegrationTest
   end
 
   test "user fills out info to sign up as a user and gets registered" do
-    # i need to figure out why this is failing.  Is it because the data is filled in and needs to be cleared out?
     visit register_path
     fill_in("user[name]", with: "Irma User")
     fill_in("user[email]", with: "Irma@example.com")
     fill_in("user[password]", with: "pass")
-    click_button "Create Account"
+    click_on "Create Account"
     assert_equal root_path, current_path
+    click_link "Log Out"
   end
 end

@@ -4,7 +4,6 @@ class HomePageViewTest < ActionDispatch::IntegrationTest
 
   test "user sees homepage content" do
     visit root_path
-
     within(".navbar") do
       assert page.has_link?("Blog")
       assert page.has_link?("Reviews")

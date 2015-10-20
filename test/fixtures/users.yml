@@ -7,3 +7,8 @@ justin:
   name: Justin Pease
   email: justin@example.com
   password_digest: password
+
+user:
+  name: user
+  email: user@email.com
+  password_digest: "$2a$10$.g6WMSkSmZn6kXcvdrnmo.MH2VQSctlh.wlLBQxVm2gpJlz3Jzf96"

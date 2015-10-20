@@ -20,8 +20,12 @@
           <li><%= link_to "About" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <% if session[:user] %>
+        <li><%= link_to "Log Out", logout_path, method: :delete %>
+        <% else %>
         <li><a href='/login'>Log In</a></li>
         <li><%= link_to "Sign Up", register_path %></li>
+        <% end %>
         <li><form class="navbar-form" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">

@@ -11,7 +11,7 @@ class HomePageViewTest < ActionDispatch::IntegrationTest
       assert page.has_link?("Food Challenges")
       assert page.has_link?("About")
       assert page.has_link?("Log In")
-      assert page.has_link?("Create Account")
+      assert page.has_link?("Sign Up")
     end
 
     within("#welcome-boxes") do

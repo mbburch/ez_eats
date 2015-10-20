@@ -28,7 +28,6 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'sqlite3'
-  gem 'sqlite3'
 end
 
 group :development do

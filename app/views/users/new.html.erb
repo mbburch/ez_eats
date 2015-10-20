@@ -1,6 +1,27 @@
-<%= form_for @user, url: register_path, method: :post do |f| %>
-<%= f.text_field :name, placeholder: "Name", autofocus: true %>
-<%= f.text_field :email, placeholder: "Email" %>
-<%= f.text_field :password, placeholder: "Password" %>
-<%= f.submit "Create Account" %>
+<% if session[:user] %>
+<div class='row'>
+  <div class='col-md-12'>
+    <div class='panel'>
+      <div class='panel-body'>
+        <h4>Please Log out before making a new Account</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<% else %>
+<div class='row'>
+  <div class='col-md-6 col-centered'>
+    <div class='panel'>
+      <div class='panel-body'>
+        <h3>Account Creation</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= flash[:alert] %>
+</div>
+<%= render 'signup_form' %>
+
 <% end %>

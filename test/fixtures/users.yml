@@ -13,3 +13,8 @@ justin:
   name: Justin Pease
   email: justin@example.com
   password_digest: password
+
+user1:
+  name: Irma User
+  email: Irma@example.com
+  password_digest: pass

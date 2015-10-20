@@ -1,0 +1,7 @@
+
+<%= form_for @user, url: register_path, method: :post do |f| %>
+<%= f.text_field :name, placeholder: "Name*", autofocus: true %>
+<%= f.text_field :email, placeholder: "Email*" %>
+<%= f.text_field :password, placeholder: "Password*" %>
+<%= f.submit "Create Account" %>
+<% end %>

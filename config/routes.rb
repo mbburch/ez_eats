@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  get "/register" => "users#new"
+  post "/register" => "users#create"
   resources :reviews
   resources :blogs
   resources :challenges
   resources :tags
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

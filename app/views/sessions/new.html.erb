@@ -1,5 +1,19 @@
-<%= form_for :user do |f| %>
-<%= f.text_field :email, placeholder: "Email", autofocus: true %>
-<%= f.password_field :password, placeholder: "Password" %>
-<%= f.submit "Log In" %>
-<% end %>
+<div class='row text-center'>
+  <div class='col-md-12 col-centered'>
+    <div class='panel'>
+      <div class='panel-body text-center'>
+        <%= form_for :user do |f| %>
+        <h3>Enter User Info</h3>
+        <%= f.text_field :email, placeholder: "Email", autofocus: true %>
+        <%= f.password_field :password, placeholder: "Password" %>
+        <%= f.submit "Log In" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <% if flash.notice %>
+  <%= render 'layouts/flash' %>
+  <% end %>
+</div>

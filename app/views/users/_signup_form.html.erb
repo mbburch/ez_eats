@@ -1,7 +1,7 @@
 <div class='row text-center'>
-  <div class='col-md-6 col-centered'>
+  <div class='col-md-8 col-centered'>
     <div class='panel'>
-      <div class='panel-body text-left'>
+      <div class='panel-body text-centered'>
         <%= form_for @user, url: register_path, method: :post, html: {class: "signup"} do |f| %>
         <h3>Account Info</h3>
         <%= f.text_field :name, placeholder: "Name", autofocus: true %>

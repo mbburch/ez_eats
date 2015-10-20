@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'user successfully created'
       redirect_to root_path
     else
-      flash[:alert] = user.errors.full_messages.first
+      flash[:alert] = "Invalid User Info.  Please enter your name, a valid email and a password."
       redirect_to action: 'new'
     end
   end

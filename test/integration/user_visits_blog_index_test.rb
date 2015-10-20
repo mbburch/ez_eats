@@ -15,6 +15,5 @@ class BlogIndexViewTest < ActionDispatch::IntegrationTest
     assert page.has_content?("This is my second blog entry")
     assert page.has_content?("Oct 10, 2015")
     assert page.has_content?("Oct 18, 2015")
-
   end
 end

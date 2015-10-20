@@ -13,8 +13,7 @@ class UserCreatesAccountTest < ActionDispatch::IntegrationTest
   end
 
   test "user fills out info to sign up as a user and gets registered" do
-    skip
-    # i need to figure out why this is failing.  Is it because the data is filled in and needs to be cleared out? 
+    # i need to figure out why this is failing.  Is it because the data is filled in and needs to be cleared out?
     visit register_path
     fill_in("user[name]", with: "Irma User")
     fill_in("user[email]", with: "Irma@example.com")

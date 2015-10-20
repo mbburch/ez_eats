@@ -1,6 +1,11 @@
 class BlogsController < ApplicationController
   helper_method :archive
 
+  def show
+    @blog = Blog.find(params[:id])
+    @tags = Tag.all
+  end
+
   def index
     @blogs = Blog.all
     @tags = Tag.all

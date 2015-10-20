@@ -48,4 +48,22 @@ $color5: #517182; //rgba(81, 113, 130, 100)
     }
   }
 
+  .blog-heading {
+    text-align: center;
+    font-family: "Helvetica";
+    color: $color3;
+  }
+
+  .blog-entry {
+    h3 {
+      font-weight: lighter;
+    }
+    //
+    // img {
+    //   height: 800px;
+    // }
+  }
+
+
+
 }

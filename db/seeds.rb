@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'ffaker'
+
 class Seed
 
   def initialize
@@ -14,9 +9,9 @@ class Seed
 
   def generate_blogs
     10.times do
-      title  = Faker::Lorem.word.capitalize
+      title  = FFaker::Food.herb_or_spice.titleize
       image = "http://lorempixel.com/400/200/food"
-      content = Faker::Lorem.paragraph
+      content = FFaker::BaconIpsum.paragraphs.join
       Blog.create!(title:  title,
                    content: content,
                    image: image,
@@ -26,7 +21,7 @@ class Seed
 
   def generate_tags
     10.times do
-      name = Faker::Lorem.word.capitalize
+      name = FFaker::Food.ingredient.titleize
       Tag.create!(name: name)
     end
   end

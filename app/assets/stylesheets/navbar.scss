@@ -1,0 +1,35 @@
+/* Coolors Exported Palette - coolors.co/27aad8-d3c82b-7cb826-ac1b26-16363d */
+
+$color1: #27aad8; //rgba(39, 170, 216, 100)
+$color2: #d3c82b; //rgba(211, 200, 43, 100)
+$color3: #4c8e2d; //rgba(124, 184, 38, 100)
+$color4: #ac1b26; //rgba(172, 27, 38, 100)
+$color5: #16363d; //rgba(22, 54, 61, 100)
+
+
+.navbar-inverse {
+  background-color: $color1;
+
+  button {
+    background-color: $color5;
+    color: $color1;
+  }
+}
+
+.navbar-brand {
+  a {
+    color: $color4;
+    font-family: "Bangers";
+    font-size: 2.5em;
+  }
+}
+
+#nav-text {
+  li {
+    a {
+      font-size: 1.5em;
+      color: $color5;
+    }
+  }
+
+}

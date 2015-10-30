@@ -1,11 +1,10 @@
-// Place all the styles related to the blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-$color1: #57002b; //rgba(87, 0, 43, 100)
-$color2: #e0e5e2; //rgba(224, 229, 226, 100)
-$color3: #c5c096; //rgba(197, 192, 150, 100)
-$color4: #896636; //rgba(137, 102, 54, 100)
-$color5: #517182; //rgba(81, 113, 130, 100)
+/* Coolors Exported Palette - coolors.co/27aad8-d3c82b-7cb826-ac1b26-16363d */
+
+$color1: #27aad8; //rgba(39, 170, 216, 100)
+$color2: #d3c82b; //rgba(211, 200, 43, 100)
+$color3: #4c8e2d; //rgba(124, 184, 38, 100)
+$color4: #ac1b26; //rgba(172, 27, 38, 100)
+$color5: #16363d; //rgba(22, 54, 61, 100)
 
 .dropdown {
   padding: 10px;
@@ -14,6 +13,7 @@ $color5: #517182; //rgba(81, 113, 130, 100)
 
   .dropdown-toggle {
     color: $color5;
+    background-color: $color1;
     font-family: "Bangers";
   }
 }
@@ -26,6 +26,10 @@ $color5: #517182; //rgba(81, 113, 130, 100)
     color: $color4;
     float: right;
     padding-top: 5px;
+
+    h3 {
+      color: $color4;
+    }
   }
 
   h2 {
@@ -38,13 +42,14 @@ $color5: #517182; //rgba(81, 113, 130, 100)
   p {
     font-size: 1.5em;
     padding-top: 5px;
+    color: $color5;
   }
 
   button {
-    background-color: $color2;
+    background-color: $color1;
     padding: 10px;
     a {
-      color: $color4;
+      color: $color5;
     }
   }
 

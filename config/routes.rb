@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :blogs
   resources :challenges
   resources :tags
+  get "/about" => "about#show"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

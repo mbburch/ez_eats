@@ -27,9 +27,10 @@ class PageNavigationTest < ActionDispatch::IntegrationTest
   end
 
   test "user can go to the about page" do
-    skip
     visit '/'
-    click_link 'About'
+    within(".navbar") do
+      click_link 'About'
+    end
     assert_equal about_path, current_path
   end
 end
